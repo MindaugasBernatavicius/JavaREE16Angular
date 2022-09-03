@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input oninput="handledInput(this)">
+  <button onclick="doSomethingAfterClick(this)">Click me</button>
+  <div style="display: inline-block;" id="demo" class="" onmouseover="changeColor()" onmouseleave="resetColor()">
+  </div>
+
+  <script>
+    function handledInput(val) {
+      console.log(val.target);
+    }
+
+    function changeColor() {
+      let demoDiv = document.getElementById("demo");
+      demoDiv.style.color = "blue";
+    }
+
+    function resetColor() {
+      let demoDiv = document.getElementById("demo");
+      demoDiv.style.color = "black";
+    }
+
+    function doSomethingAfterClick(event) {
+      console.log(">>>", event);
+      // querying the dom
+      let demoDiv = document.getElementById("demo");
+      if (demoDiv.innerHTML === "Hello World")
+        demoDiv.innerHTML = "";
+      else
+        demoDiv.innerHTML = "Hello World";
+    }
+  </script>
+</body>
+
+</html>

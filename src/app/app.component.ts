@@ -4,33 +4,20 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <app-header></app-header>
-  <hr>
-    <div class="container">
-      <p>Hello world!</p>
-      <div>{{title}}</div>
-      <div>{{name + " !!!"}}</div>
-      <div>{{title + name + " !!!"}}</div>
-      <div>{{ 1 + 2 }}</div>
-      <!-- <div>{{ greet() }}</div> -->
-      <button (click)="greet()" class="btn btn-warning">Greet</button>
-      <p>{{message}}</p>
-    </div>
-  <hr>
-  <app-footer></app-footer>
+  <div class="container center">
+    <!-- <app-calculator></app-calculator> -->
+    <!-- <app-products></app-products> -->
+    <router-outlet></router-outlet>
+  </div>
+  <!-- <app-footer></app-footer> -->
   `,
-  styleUrls: ['./app.component.css']
+  styles: [
+    '.center { height: 90vh; '
+    + 'display: flex;'
+    + 'justify-content: center;'
+    + 'align-items: center }'
+  ]
 })
 export class AppComponent {
 
-  title = 'JREE16Angular';
-  name = "Mindaugas";
-  message = "";
-
-  constructor() {
-    console.log("@@@ AppComponent initialized!");
-  }
-
-  greet() {
-    this.message = "This is the message after click!";
-  };
 }

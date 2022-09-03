@@ -1,3 +1,7 @@
 .header {
   background-color: lightgrey !important;
 }
+
+li.active > a {
+  color: red;
+}
