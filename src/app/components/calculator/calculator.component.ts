@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
@@ -11,7 +11,24 @@ import { Component } from '@angular/core';
     <p *ngIf="showResult">{{ result }}</p>
   `,
 })
-export class CalculatorComponent {
+export class CalculatorComponent implements OnInit, OnDestroy {
+
+  constructor() {
+    console.log("constructor");
+  }
+
+  ngOnChanges(): void {
+    console.log("ngOnChanges");
+  }
+
+  ngOnInit(): void {
+    console.log("ngOnInit");
+  }
+
+  ngOnDestroy(): void {
+    console.log("ngOnDestroy");
+  }
+
   n1: number = 0;
   n2: number = 0;
   result: number = 0;

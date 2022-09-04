@@ -5,17 +5,18 @@ import { Component } from '@angular/core';
   template: `
   <app-header></app-header>
   <div class="container center">
-    <!-- <app-calculator></app-calculator> -->
-    <!-- <app-products></app-products> -->
-    <router-outlet></router-outlet>
+    <div class="mt-3">
+      <!-- <app-calculator></app-calculator> -->
+      <!-- <app-products></app-products> -->
+      <router-outlet></router-outlet>
+    </div>
   </div>
   <!-- <app-footer></app-footer> -->
   `,
   styles: [
     '.center { height: 90vh; '
     + 'display: flex;'
-    + 'justify-content: center;'
-    + 'align-items: center }'
+    + 'justify-content: center;}'
   ]
 })
 export class AppComponent {
